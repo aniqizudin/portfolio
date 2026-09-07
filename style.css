@@ -1,6 +1,6 @@
 :root {
   /* Stronger blue and indigo gradient for light mode */
-  --bg-gradient: linear-gradient(-45deg, #f0f6ff, #c0d7f2, #c5cdf6, #f0f6ff);
+  --bg-gradient: linear-gradient(-45deg, #f0f6ff, #90bff9, #dae0fa, #f0f6ff);
   --text-color: #333;
   --heading-color: #111;
   --card-bg: rgba(255, 255, 255, 0.85); /* Keeps the cards clean and white */
