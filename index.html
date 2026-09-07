@@ -3,134 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aniq | Portfolio</title>
-  <style>
-    /* CSS Variables for easy theme switching */
-    :root {
-      --bg-color: #fafafa;
-      --text-color: #222;
-      --heading-color: #000;
-      --card-bg: #fff;
-      --card-border: #eaeaea;
-      --link-color: #0066cc;
-      --shadow: rgba(0,0,0,0.05);
-    }
-
-    /* Dark Mode Colors */
-    .dark-mode {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --heading-color: #ffffff;
-      --card-bg: #1e1e1e;
-      --card-border: #333;
-      --link-color: #66b3ff;
-      --shadow: rgba(255,255,255,0.05);
-    }
-
-    body { 
-      font-family: system-ui, -apple-system, sans-serif; 
-      line-height: 1.6; 
-      max-width: 700px; 
-      margin: 0 auto; 
-      padding: 2rem; 
-      color: var(--text-color); 
-      background: var(--bg-color);
-      transition: background-color 0.3s, color 0.3s;
-    }
-    
-    h1, h2, h3 { color: var(--heading-color); }
-    .hero { margin-bottom: 3rem; position: relative; }
-    
-    /* The Toggle Button */
-    #theme-toggle {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: var(--card-bg);
-      color: var(--text-color);
-      border: 1px solid var(--card-border);
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: 0.2s;
-    }
-    #theme-toggle:hover {
-      transform: scale(1.05);
-    }
-
-    .project { 
-      margin-bottom: 1.5rem; 
-      padding: 1.5rem; 
-      background: var(--card-bg); 
-      border: 1px solid var(--card-border); 
-      border-radius: 8px; 
-      transition: transform 0.2s ease, box-shadow 0.2s ease; 
-    }
-    .project:hover { 
-      transform: translateY(-3px); 
-      box-shadow: 0 10px 20px var(--shadow); 
-    }
-    .project p { margin-top: 0.5rem; color: var(--text-color); opacity: 0.9; }
-    
-    a { color: var(--link-color); text-decoration: none; font-weight: 500; }
-    a:hover { text-decoration: underline; }
-    
-    .contact { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--card-border); }
-  </style>
+  <title>Aniq | Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-  <div class="hero">
-    <button id="theme-toggle">Dark Mode</button>
-    <h1>Hi, I'm Aniq.</h1>
-    <p>A software engineer specializing in full-stack development, cybersecurity, and data-driven solutions.</p>
-  </div>
-  
-  <h2>Selected Projects</h2>
-  
-  <div class="project">
-    <h3>AI Food Nutrition Classification</h3>
-    <p>Developed an interactive web visualization comparing AI techniques for food classification. Engineered Python scripts and trained machine learning models, benchmarking SVM against Random Forest algorithms.</p>
-  </div>
-  
-  <div class="project">
-    <h3>Manufacturing Inventory System</h3>
-    <p>Designed a comprehensive tracking system mapped to physical operations. Developed process flows for receiving, retrieving, and issuing factory items using serial numbers and tray locations.</p>
-  </div>
-  
-  <div class="project">
-    <h3>Vulnerability Assessment & Penetration Testing</h3>
-    <p>Conducted practical cybersecurity labs focused on ethical hacking, successfully identifying and executing SQL injections to understand attack vectors and database remediation strategies.</p>
-  </div>
 
-  <div class="contact">
-    <h2>Let's Connect</h2>
-    <p><a href="mailto:muhdaniq.salleh@email.com">Email Me</a> &nbsp;|&nbsp; <a href="https://github.com/aniqizudin">GitHub</a></p>
-  </div>
+  <header>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+  </header>
 
-  <script>
-    const toggleBtn = document.getElementById('theme-toggle');
-    const body = document.body;
+  <div class="container">
+    <div class="hero">
+      <h1>Hi, I'm Aniq.</h1>
+      <p>Software Engineer | Full-Stack | Cybersecurity</p>
+    </div>
     
-    // Check if the user previously chose dark mode
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme === 'dark') {
-      body.classList.add('dark-mode');
-      toggleBtn.textContent = 'Light Mode';
-    }
+    <div class="about-card">
+      <h2>About Me</h2>
+      <p>I am a final-year computer science undergraduate passionate about building secure, data-driven solutions. Currently, I am completing an internship in the manufacturing planning sector, where I bridge the gap between software and physical operations.</p>
+      <br>
+      <p>My technical foundation spans full-stack web development (React, Python), machine learning implementation, and practical vulnerability assessment. When I am not writing scripts or mapping out process flows, I start my mornings with a 3km walk to clear my head.</p>
+    </div>
+  </div>
 
-    // Toggle functionality
-    toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-        toggleBtn.textContent = 'Light Mode';
-      } else {
-        localStorage.setItem('theme', 'light');
-        toggleBtn.textContent = 'Dark Mode';
-      }
-    });
-  </script>
+  <footer>
+    <p>Let's Connect: <a href="mailto:muhdaniq.salleh@email.com">Email</a> | <a href="https://github.com/aniqizudin">GitHub</a></p>
+    <p style="font-size: 0.8rem; margin-top: 1rem; opacity: 0.7;">© 2026 Aniq. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
