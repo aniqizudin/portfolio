@@ -1,25 +1,31 @@
 :root {
-  --bg-color: #fafafa;
-  --dot-color: rgba(0, 0, 0, 0.08); /* Subtle dark dots */
+  /* Soft pastel gradient for light mode */
+  --bg-gradient: linear-gradient(-45deg, #f8f9fa, #e2e8f0, #edf2f7, #f8f9fa);
   --text-color: #333;
   --heading-color: #111;
-  --card-bg: #fff;
-  --card-border: #eaeaea;
+  --card-bg: rgba(255, 255, 255, 0.85); /* Slightly transparent so the background shows through */
+  --card-border: rgba(0,0,0,0.05);
   --accent-color: #4f46e5; 
-  --header-bg: #ffffff;
+  --header-bg: rgba(255, 255, 255, 0.95);
   --shadow: rgba(0,0,0,0.05);
 }
 
 .dark-mode {
-  --bg-color: #121212;
-  --dot-color: rgba(255, 255, 255, 0.08); /* Subtle light dots */
+  /* Deep, rich gradient for dark mode */
+  --bg-gradient: linear-gradient(-45deg, #121212, #1a202c, #2d3748, #1a202c);
   --text-color: #a0aec0;
   --heading-color: #f7fafc;
-  --card-bg: #1e1e1e;
-  --card-border: #2d3748;
+  --card-bg: rgba(30, 30, 30, 0.85);
+  --card-border: rgba(255,255,255,0.05);
   --accent-color: #818cf8;
-  --header-bg: #1a202c;
+  --header-bg: rgba(26, 32, 44, 0.95);
   --shadow: rgba(0,0,0,0.2);
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -29,12 +35,12 @@ body {
   line-height: 1.6; 
   color: var(--text-color); 
   
-  /* The Grid Magic */
-  background-color: var(--bg-color);
-  background-image: radial-gradient(var(--dot-color) 1.5px, transparent 1.5px);
-  background-size: 25px 25px;
+  /* The Animation Magic */
+  background: var(--bg-gradient);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   
-  transition: background-color 0.3s, color 0.3s;
+  transition: color 0.3s; /* Removed background transition so the animation runs smoothly */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
