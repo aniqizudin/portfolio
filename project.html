@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aniq | Projects</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* A quick addition to make bullet points look clean inside the cards */
+    .project ul { margin-top: 0.8rem; padding-left: 1.2rem; }
+    .project li { margin-bottom: 0.4rem; color: var(--text-color); opacity: 0.9; }
+    .tech-stack { font-size: 0.9rem; color: var(--accent-color); font-weight: 500; margin-top: -0.5rem; margin-bottom: 1rem; }
+  </style>
 </head>
 <body>
 
@@ -20,23 +26,96 @@
     <h2>Selected Work</h2>
     
     <div class="project">
-      <h3>AI Food Nutrition Classification</h3>
-      <p>Developed an interactive web visualization comparing AI techniques for food classification. Engineered Python scripts and trained machine learning models, benchmarking SVM against Random Forest algorithms.</p>
+      <h3>Store Inventory Management System</h3>
+      <p class="tech-stack">Microsoft Excel, VBA, MS SQL Server, ASP.NET</p>
+      <ul>
+        <li>Developed an inventory management system for the manufacturing planning department to efficiently organize and track factory store items.</li>
+        <li>Designed and mapped clear process flows for the receiving, retrieving, and issuing of physical assets.</li>
+        <li>Implemented a structured tracking method utilizing item serial numbers and specific physical tray locations to reduce retrieval time and prevent lost inventory.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>UniMAP Security Integrated System (USIS) Modules</h3>
+      <p class="tech-stack">Java (JSP), NetBeans, Toad for Oracle</p>
+      <ul>
+        <li>Developed and integrated critical application modules into the university's central security system to digitize manual campus processes.</li>
+        <li>Built a comprehensive vehicle sticker module that allows users to apply for and track their campus parking approvals.</li>
+        <li>Engineered an event reservation module to streamline how campus events are submitted and managed by the security department.</li>
+        <li>Utilized JSP and NetBeans for the application layer, while managing complex relational data and queries using Toad for Oracle.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Comparative Analysis of AI Techniques for Food Classification</h3>
+      <p class="tech-stack">Python, TypeScript, React.js</p>
+      <ul>
+        <li>Built a food classification system using Python to compare how well different AI models (SVM vs. Random Forest) predict nutritional values.</li>
+        <li>Developed a clean, interactive web dashboard using React and TypeScript, styled with Tailwind CSS to make the data easy to navigate.</li>
+        <li>Visualized model accuracy and nutrient breakdowns with Recharts, creating dynamic bar charts for better user understanding.</li>
+        <li>Processed and cleaned the dataset using Pandas, then integrated Firebase to securely sync the machine learning results to the web app in real-time.</li>
+      </ul>
     </div>
     
     <div class="project">
-      <h3>Manufacturing Inventory System</h3>
-      <p>Designed a comprehensive tracking system mapped to physical operations. Developed process flows for receiving, retrieving, and issuing factory items using serial numbers and tray locations.</p>
+      <h3>Sitting Posture Detection System</h3>
+      <p class="tech-stack">Python, YOLOv8, OpenCV, Tkinter</p>
+      <ul>
+        <li>Engineered a real-time ergonomic monitoring system using YOLOv8 and computer vision to classify "Good" vs. "Bad" sitting postures via live webcam feed.</li>
+        <li>Trained the model on a curated dataset of 4,977 images, achieving a mean Average Precision of 89.0% on the test set and 83.8% on the validation set.</li>
+        <li>Developed a user-friendly desktop GUI using Tkinter and OpenCV that visualizes detection bounding boxes and triggers automated desktop notifications when poor posture is sustained.</li>
+        <li>Optimized the inference pipeline for standard laptops, enabling low-latency performance without requiring specialized hardware.</li>
+      </ul>
     </div>
     
     <div class="project">
-      <h3>Vulnerability Assessment & Penetration Testing</h3>
-      <p>Conducted practical cybersecurity labs focused on ethical hacking, successfully identifying and executing SQL injections to understand attack vectors and database remediation strategies.</p>
+      <h3>Plantation Analysis & Feature Extraction System</h3>
+      <p class="tech-stack">MATLAB</p>
+      <ul>
+        <li>Developed an end-to-end image processing pipeline to automate plant detection and counting in aerial agricultural imagery.</li>
+        <li>Implemented CLAHE (Contrast Limited Adaptive Histogram Equalization) in Lab color space and the Excess Green (ExG) index to isolate vegetation from complex soil backgrounds.</li>
+        <li>Applied K-Means Clustering and Otsu’s Thresholding for segmentation, utilizing the Watershed algorithm to successfully separate and count overlapping plants.</li>
+        <li>Engineered an interactive GUI using MATLAB App Designer to visualize processing stages and compute validation metrics (IoU, Dice Score) and texture analysis (Smoothness, Entropy) in real-time.</li>
+      </ul>
     </div>
+
+    <div class="project">
+      <h3>GeoQuiz: Country Learning Application</h3>
+      <p class="tech-stack">Android Studio, Firebase</p>
+      <ul>
+        <li>Created an interactive "Edutainment" mobile application designed to teach world geography to primary and secondary school students.</li>
+        <li>Integrated Firebase for backend authentication (login/registration) and real-time database management to store user profiles and quiz scores.</li>
+        <li>Built a comprehensive Admin Dashboard with CRUD capabilities, enabling administrators to add, update, and delete quiz questions dynamically.</li>
+        <li>Designed a responsive User Interface (UI) using XML to ensure consistent layout and usability across various Android devices.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Sport Court Booking System</h3>
+      <p class="tech-stack">Java (JSP, Servlets), MySQL</p>
+      <ul>
+        <li>Architected a centralized booking platform using the Model-View-Controller (MVC) design pattern to cleanly separate business logic from the user interface.</li>
+        <li>Utilized Java Servlets for backend processing and JSP (JavaServer Pages) for dynamic frontend rendering, ensuring efficient data flow between the server and the client.</li>
+        <li>Streamlined the reservation process for futsal and badminton courts, allowing users to filter by date and court type to check real-time availability.</li>
+        <li>Implemented distinct user roles where Customers can book slots and Court Owners can manage facility details and view booking schedules.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Warung Bang Teh Food Ordering System</h3>
+      <p class="tech-stack">Oracle Database, PHP</p>
+      <ul>
+        <li>Digitized a manual, paper-based sales recording system for a local eatery, increasing operational efficiency and reducing data entry errors.</li>
+        <li>Designed a relational database (ERD) to manage entities for Staff, Menu, Orders, and Receipts, ensuring data integrity across business operations.</li>
+        <li>Developed SQL scripts to generate automated daily, weekly, and monthly sales reports, allowing management to track financial performance and identify sales trends.</li>
+        <li>Implemented role-based access control to differentiate between staff and manager functionalities within the system.</li>
+      </ul>
+    </div>
+
   </div>
 
   <footer>
-    <p>Let's Connect: <a href="mailto:your@email.com">Email</a> | <a href="https://github.com/aniqizudin">GitHub</a></p>
+    <p>Let's Connect: <a href="mailto:muhdaniq.salleh@email.com">Email</a> | <a href="https://github.com/aniqizudin">GitHub</a></p>
     <p style="font-size: 0.8rem; margin-top: 1rem; opacity: 0.7;">© 2026 Aniq. All rights reserved.</p>
   </footer>
 
