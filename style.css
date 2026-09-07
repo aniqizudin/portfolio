@@ -1,9 +1,9 @@
 :root {
-  /* Soft pastel gradient for light mode */
-  --bg-gradient: linear-gradient(-45deg, #fafafa, #eef2ff, #e0e7ff, #fafafa);
+  /* Stronger blue and indigo gradient for light mode */
+  --bg-gradient: linear-gradient(-45deg, #f0f6ff, #bfdbfe, #a5b4fc, #f0f6ff);
   --text-color: #333;
   --heading-color: #111;
-  --card-bg: rgba(255, 255, 255, 0.85); /* Slightly transparent so the background shows through */
+  --card-bg: rgba(255, 255, 255, 0.85); /* Keeps the cards clean and white */
   --card-border: rgba(0,0,0,0.05);
   --accent-color: #4f46e5; 
   --header-bg: rgba(255, 255, 255, 0.95);
