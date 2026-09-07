@@ -1,6 +1,6 @@
 :root {
   /* Soft pastel gradient for light mode */
-  --bg-gradient: linear-gradient(-45deg, #f8f9fa, #e2e8f0, #edf2f7, #f8f9fa);
+  --bg-gradient: linear-gradient(-45deg, #fafafa, #eef2ff, #e0e7ff, #fafafa);
   --text-color: #333;
   --heading-color: #111;
   --card-bg: rgba(255, 255, 255, 0.85); /* Slightly transparent so the background shows through */
@@ -12,7 +12,7 @@
 
 .dark-mode {
   /* Deep, rich gradient for dark mode */
-  --bg-gradient: linear-gradient(-45deg, #121212, #1a202c, #2d3748, #1a202c);
+  --bg-gradient: linear-gradient(-45deg, #121212, #1e1b4b, #312e81, #121212);
   --text-color: #a0aec0;
   --heading-color: #f7fafc;
   --card-bg: rgba(30, 30, 30, 0.85);
@@ -35,10 +35,10 @@ body {
   line-height: 1.6; 
   color: var(--text-color); 
   
-  /* The Animation Magic */
-  background: var(--bg-gradient);
+/* The Animation Magic */
+  background-image: var(--bg-gradient);
   background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  animation: gradientBG 5s ease infinite;
   
   transition: color 0.3s; /* Removed background transition so the animation runs smoothly */
   display: flex;
